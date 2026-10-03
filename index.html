@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Nishat ♡</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#07030d;
+    color:white;
+    font-family:Georgia,serif;
+    overflow:hidden;
+}
+
+/* Stars */
+.stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:blink 2s infinite alternate;
+}
+
+@keyframes blink{
+    from{opacity:.15}
+    to{opacity:1}
+}
+
+/* Main */
+.screen{
+    position:relative;
+    z-index:2;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+}
+
+.box{
+    width:100%;
+    max-width:600px;
+}
+
+/* Opening */
+#opening h3{
+    font-size:14px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    opacity:.65;
+    margin-bottom:25px;
+}
+
+#opening h1{
+    font-size:clamp(40px,12vw,70px);
+    margin-bottom:30px;
+}
+
+.open-btn{
+    padding:15px 30px;
+    border:1px solid #ff9bd8;
+    border-radius:50px;
+    background:transparent;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.open-btn:hover{
+    background:#ff4da6;
+    box-shadow:0 0 30px #ff4da6;
+    transform:scale(1.05);
+}
+
+/* Letter */
+#letter{
+    display:none;
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.name{
+    font-size:clamp(55px,15vw,90px);
+    background:linear-gradient(90deg,#fff,#ff91d2,#fff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:200%;
+    animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+    to{background-position:200%}
+}
+
+.infinity{
+    font-size:75px;
+    margin:15px 0;
+    animation:float 3s ease-in-out infinite;
+    text-shadow:0 0 25px #ff4da6;
+}
+
+@keyframes float{
+    50%{transform:translateY(-10px)}
+}
+
+.message{
+    font-size:18px;
+    line-height:1.9;
+    color:#eee;
+    margin:20px auto;
+}
+
+.pink{
+    color:#ff9bd8;
+}
+
+.next-btn{
+    margin-top:20px;
+    padding:13px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4da6;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,77,166,.4);
+}
+
+/* Final */
+#final{
+    display:none;
+    animation:fadeIn 2s ease;
+}
+
+.final-text{
+    font-size:23px;
+    line-height:1.8;
+    color:#ffd4ed;
+}
+
+.big-heart{
+    font-size:70px;
+    margin:20px;
+    animation:heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.18)}
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:22px;
+    animation:rise 5s linear forwards;
+    pointer-events:none;
+    z-index:10;
+}
+
+@keyframes rise{
+    0%{
+        opacity:0;
+        transform:translateY(0) scale(.5);
+    }
+    15%{opacity:1}
+    100%{
+        opacity:0;
+        transform:translateY(-110vh) scale(1.5) rotate(25deg);
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+
+<div class="screen">
+
+<div class="box">
+
+    <!-- Opening -->
+    <div id="opening">
+
+        <h3>A little surprise for</h3>
+
+        <h1>Someone Special ♡</h1>
+
+        <button class="open-btn" onclick="openLetter()">
+            Open it ♡
+        </button>
+
+    </div>
+
+
+    <!-- Letter -->
+    <div id="letter">
+
+        <div class="name">
+            Nishat
+        </div>
+
+        <div class="infinity">
+            ♾️
+        </div>
+
+        <div class="message">
+
+            In this huge universe,
+            somehow my heart found
+            <span class="pink">you.</span>
+
+   …
